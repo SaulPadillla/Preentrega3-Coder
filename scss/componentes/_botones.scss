@@ -1,0 +1,14 @@
+@use "../utilidades/extend";
+@use "../base/variables";
+
+.main-button {
+    @extend %boton-base;
+    background-color: variables.$color-primary;
+    color: variables.$color-light;
+}
+
+.cancel-button {
+    @extend %boton-base;
+    background-color: variables.$color-secondary;
+    color: variables.$color-light;
+}

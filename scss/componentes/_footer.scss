@@ -1,0 +1,41 @@
+//TODO LO DEL FOOTER
+@use "../base/variables";
+@use "../utilidades/mixins";
+
+.footer {
+    background: variables.$color-dark;
+    color: variables.$color-light;
+    padding: 30px 0;
+
+    &__container {
+        @include mixins.container();
+        @include mixins.modo-flex(row, space-between, flex-start);
+
+        @include mixins.breakpoint(800px) {
+            @include mixins.modo-flex(column, center, center);
+            text-align: center;
+            gap: 20px;
+        }
+    }
+
+    &__logo img {
+        width: 60px;
+        margin-bottom: 5px;
+    }
+
+    &__icons img {
+        width: 26px;
+        transition: .2s;
+
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+
+    &__copy {
+        text-align: center;
+        margin-top: 20px;
+        opacity: .7;
+        font-size: 14px;
+    }
+}
