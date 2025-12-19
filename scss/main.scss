@@ -1,17 +1,33 @@
 // EL MAIN SOLO PARA TRANSPORTAR ARCHIVOS - SIMPLEMENTE ESO
 // SASS TE ENTREGA CONTROL = ESCALABILIDAD & PROLIJIDAD
 
-//  BASE 
+// //  BASE 
+// @use "./base/reset";
+// @use "./base/globals";
+// @use "./base/variables";
+
+// //  UTILIDADES 
+// @use "./utilidades/mixins";
+// @use "./utilidades/extend";
+
+// //  COMPONENTES 
+// @use "./componentes/header";
+// @use "./componentes/footer";
+// @use "./componentes/botones";
+// @use "./componentes/home";
+/* BASE (primero siempre) */
+
 @use "./base/reset";
 @use "./base/globals";
 @use "./base/variables";
-
-//  UTILIDADES 
+/* UTILIDADES */
 @use "./utilidades/mixins";
 @use "./utilidades/extend";
 
-//  COMPONENTES 
-@use "./componentes/header";
-@use "./componentes/footer";
+/* COMPONENTES */
+@use "./componentes/cotizar";
 @use "./componentes/botones";
+@use "./componentes/footer";
 @use "./componentes/home";
+@use "./componentes/servicios";
+

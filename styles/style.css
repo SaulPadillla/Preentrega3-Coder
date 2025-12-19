@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* BASE (primero siempre) */
 * {
   margin: 0;
   padding: 0;
@@ -5,151 +7,248 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #ffffff;
-  color: #18181d;
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.5;
 }
 
-a {
-  text-decoration: none;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-.hero__content .btn, .main-button, .cancel-button {
-  padding: 10px 18px;
-  border-radius: 6px;
+/* UTILIDADES */
+/* COMPONENTES */
+.page-cotizar {
+  min-height: 100vh;
+  background: linear-gradient(0deg, rgba(11, 19, 32, 0.45), rgba(11, 19, 32, 0.45)), url("https://media.istockphoto.com/id/498015026/es/foto/mano-y-cient%C3%ADfico-matraz-en-tubos-de-ensayo-en-la-gradilla.jpg?s=612x612&w=0&k=20&c=R3kvs0blOgnx0JcBcGK63G4FcG04j-SU_oVPM7nozoM=") center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+.cotizar-surface {
+  background-color: rgba(255, 255, 255, 0.96);
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  padding: 2rem;
+}
+
+.btn-brand {
+  border-radius: 999px;
+  padding-inline: 1.25rem;
   font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-  transition: 0.3s ease;
 }
 
-header {
-  background-color: #18181d;
-  padding: 15px 0;
-}
-header nav {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-header nav .nav-logo {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-header nav .nav-logo h1 {
+footer {
+  margin-top: 3rem;
+  background-color: #0b1320;
   color: #ffffff;
-  font-size: 22px;
 }
-header nav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+
+.footer-content {
+  padding: 2rem 0;
 }
-header nav ul li {
+
+.footer-links {
   list-style: none;
-}
-header nav ul li .li-link {
-  color: #ffffff;
-  font-weight: 600;
-  transition: 0.2s;
-}
-header nav ul li .li-link:hover {
-  color: #0a60b6;
+  padding: 0;
+  margin: 0;
 }
 
-.footer {
-  background: #18181d;
+.footer-links li {
+  margin: 0.5rem 0;
+}
+
+.footer-links a {
   color: #ffffff;
-  padding: 30px 0;
+  text-decoration: none;
 }
-.footer__container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
-@media (max-width: 800px) {
-  .footer__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-  }
+
+.social-links a {
+  font-size: 1.4rem;
+  margin-right: 0.75rem;
+  color: #ffffff;
+  transition: opacity 0.2s ease;
 }
-.footer__logo img {
-  width: 60px;
-  margin-bottom: 5px;
+
+.social-links a:hover {
+  opacity: 0.85;
 }
-.footer__icons img {
-  width: 26px;
-  transition: 0.2s;
-}
-.footer__icons img:hover {
-  transform: scale(1.15);
-}
-.footer__copy {
+
+.footer-bottom {
   text-align: center;
-  margin-top: 20px;
-  opacity: 0.7;
-  font-size: 14px;
-}
-
-.main-button {
-  background-color: #0a60b6;
-  color: #ffffff;
-}
-
-.cancel-button {
-  background-color: #dd1818;
-  color: #ffffff;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .hero {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: linear-gradient(0deg, rgba(92, 104, 92, 0.918), rgba(48, 101, 187, 0.55)), url("https://img.freepik.com/fotos-premium/cientificos-trabajan-laboratorios-ciencias_34433-640.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+  padding: 5rem 0;
+}
+
+.hero-content h1 {
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.hero-content p {
+  max-width: 60ch;
+  margin: 1rem 0 1.5rem;
+  opacity: 0.95;
+}
+
+.hero-buttons {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-muted {
+  background-color: #f6f8fb;
+}
+
+.service-card {
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.nav-card {
+  display: block;
+  background-color: #ffffff;
+  color: inherit;
+  padding: 1.25rem;
+  border-radius: 14px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.nav-card:focus-visible {
+  outline: 3px solid rgba(13, 110, 253, 0.35);
+  outline-offset: 4px;
+}
+
+.allies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  padding: 60px 0;
+  gap: 1.25rem;
+  padding: 1.5rem;
 }
-.hero__content {
-  width: 50%;
+
+.ally-item {
+  width: 300px;
+  height: 160px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.hero__content h2 {
-  font-size: 28px;
-  font-weight: 700;
-  color: #18181d;
-  margin-bottom: 12px;
+
+.ally-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
-.hero__content p {
-  font-size: 16px;
-  margin-bottom: 18px;
+
+.ally-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
-.hero__content .btn--primary {
-  background: #0a60b6;
-  color: white;
+
+.about-hero {
+  min-height: 55vh;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: linear-gradient(0deg, rgba(11, 19, 32, 0.65), rgba(11, 19, 32, 0.65)), url("https://www.iltascabile.com/wp-content/uploads/2016/11/donnescienza-hero.jpg") center/cover no-repeat;
 }
-.hero__content .btn--primary:hover {
-  background-color: rgb(7.875, 75.6, 143.325);
+
+.about-hero-content {
+  padding: 4rem 0;
+  text-align: center;
 }
-.hero__image img {
-  width: 280px;
+
+.about-hero-content h1 {
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.about-hero-content p {
+  max-width: 60ch;
+  margin: 1rem auto 0;
+  opacity: 0.95;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ESPACIO DE IMAGEN */
+.product-card-img {
+  width: 100%;
+  height: 180px;
+  background-color: #f6f8fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTENIDO */
+.product-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex-grow: 1;
+}
+
+.product-card-body p {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* BOTÓN ABAJO SIEMPRE */
+.product-card-body a {
+  margin-top: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

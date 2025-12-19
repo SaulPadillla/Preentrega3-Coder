@@ -1,0 +1,20 @@
+@use "../base/variables";
+
+.page-cotizar {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(0deg, rgba(11, 19, 32, 0.45), rgba(11, 19, 32, 0.45)),
+        url("https://media.istockphoto.com/id/498015026/es/foto/mano-y-cient%C3%ADfico-matraz-en-tubos-de-ensayo-en-la-gradilla.jpg?s=612x612&w=0&k=20&c=R3kvs0blOgnx0JcBcGK63G4FcG04j-SU_oVPM7nozoM=") center / cover no-repeat;
+    background-attachment: fixed;
+}
+
+
+.cotizar-surface {
+    background-color: rgba(255, 255, 255, 0.96);
+
+    border-radius: variables.$radius;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+
+    padding: 2rem;
+}

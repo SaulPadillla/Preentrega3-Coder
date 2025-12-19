@@ -1,51 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="description"
+        content="Productos y servicios de QUIMEDSA: reactivos químicos, equipos de laboratorio y servicio técnico especializado.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SERVICIOS - QUIMEDSA</title>
-        <!-- CSS COMPILADO DESDE SASS -->
+    <title>Servicios | QUIMEDSA</title>
+    <!-- BOOTSTRAP ICONS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- CSS COMPILADO -->
     <link rel="stylesheet" href="../styles/style.css">
 </head>
+
 <body>
     <header>
-        <nav>
-            <div class="nav-logo">
-                <img src="" alt="Logo QUIMEDSA"> // INSERTAR IMAGEN
-                <h1>QUIMEDSA</h1>
+        <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+                    <img src="../assets/ICONO QUIMEDSA.png" alt="Logo de QUIMEDSA" width="50" height="50">
+                    <span class="fw-bold">QUIMEDSA</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarQuimedsa"
+                    aria-controls="navbarQuimedsa" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarQuimedsa">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contáctanos</a>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-primary btn-brand" href="./cotizar.html">Cotiza</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-
-        <ul>
-            <li>
-                <a class="li-link" href="../index.html">Home</a>
-            </li>
-            <li>
-                <a class="li-link" href="./nosotros.html">Nosotros</a>
-            </li>
-            <li>
-                <a class="li-link" href="#">Servicios</a>
-            </li>
-            <li>
-                <a class="li-link" href="./contacto.html">Contáctanos</a>
-            </li>
-        </ul>
         </nav>
     </header>
+
     <main>
+        <!-- HERO INTERNO -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Productos</h1>
+                <p>
+                    Reactivos químicos y equipos de laboratorio disponibles para cotización.
+                </p>
+            </div>
+        </section>
+        <!-- PRODUCTOS QUÍMICOS -->
+        <section class="section">
+            <div class="container">
+                <h2 class="mb-4">Productos químicos</h2>
+                <div class="row g-4">
+
+                    <!-- PRODUCTO 1 -->
+                    <div class="col-md-6 col-lg-4">
+
+                        <article class="product-card">
+
+                            <div class="product-card-img">
+                                <img src="../assets/productos/Acido-sulfurico.jpg" alt="Ácido sulfúrico">
+                            </div>
+                            <div class="product-card-body">
+                                <h3 class="h5">Ácido sulfúrico</h3>
+                                <p>
+                                    Reactivo químico utilizado en aplicaciones de laboratorio e industria.
+                                </p>
+                                <a class="btn btn-primary btn-brand" href="./cotizar.html">
+                                    Cotizar
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- PRODUCTO 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="product-card">
+                            <div class="product-card-img">
+                                <img src="../assets/productos/Acido clorhidrico.jpg" alt="Ácido clorhídrico">
+                            </div>
+                            <div class="product-card-body">
+
+                                <h3 class="h5">Ácido clorhídrico</h3>
+                                <p>
+                                    Solución química para procesos de análisis y control de calidad.
+                                </p>
+                                <a class="btn btn-primary btn-brand" href="./cotizar.html">
+                                    Cotizar
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- PRODUCTO 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="product-card">
+                            <div class="product-card-img">
+                                <img src="../assets/productos/Ethanol.jpg" alt="Etanol absoluto">
+                            </div>
+                            <div class="product-card-body">
+                                <h3 class="h5">Etanol absoluto</h3>
+                                <p>
+                                    Reactivo de alta pureza para procedimientos especializados de laboratorio.
+                                </p>
+                                <a class="btn btn-primary btn-brand" href="./cotizar.html">Cotizar</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
+        <!-- EQUIPOS DE LABORATORIO -->
+        <section class="section section-muted">
+            <div class="container">
+                <h2 class="mb-4">Equipos de laboratorio</h2>
+                <div class="row g-4">
+                    <!-- EQUIPO 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="product-card">
+                            <div class="product-card-img">
+                                <img src="../assets/productos/Microscopi-binocular.jpg" alt="Microscopio binocular">
+                            </div>
+                            <div class="product-card-body">
+                                <h3 class="h5">Microscopio binocular</h3>
+                                <p>
+                                    Equipo óptico para observación y análisis de muestras en laboratorio.
+                                </p>
+                                <a class="btn btn-primary btn-brand" href="./cotizar.html">
+                                    Cotizar
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- EQUIPO 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="product-card">
+                            <div class="product-card-img">
+                                <img src="../assets/productos/bomba-vacio.png" alt="Bomba de vacío">
+                            </div>
+                            <div class="product-card-body">
+                                <h3 class="h5">Bomba de vacío</h3>
+                                <p>
+                                    Equipo utilizado en filtración, secado y procesos con vacío controlado.
+                                </p>
+                                <a class="btn btn-primary btn-brand" href="./cotizar.html">
+                                    Cotizar
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- EQUIPO 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <article class="product-card">
+                            <div class="product-card-img">
+                                <img src="../assets/productos/cintrifuga-digital.jpg" alt="Centrífuga digital">
+                            </div>
+                            <div class="product-card-body">
+                                <h3 class="h5">Centrífuga digital</h3>
+                                <p>
+                                    Equipo para separación de muestras con control digital de velocidad y tiempo.
+                                </p>
+                                <a class="btn btn-primary btn-brand" href="./cotizar.html">
+                                    Cotizar
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- SERVICIOS -->
+        <section class="section">
+            <div class="container">
+                <h2 class="mb-3">Servicios</h2>
+                <p class="mb-4">
+                    QUIMEDSA ofrece servicios de diagnóstico, mantenimiento preventivo y correctivo de equipos de
+                    laboratorio, además de brindar capacitación y asesoramiento en su manejo.
+                </p>
+                <h3 class="h5 mb-3">Equipos incluidos en la cobertura de servicio</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="service-list">
+                            <li>Agitadores magnéticos</li>
+                            <li>Autoclaves</li>
+                            <li>Balanzas</li>
+                            <li>Baños de ultrasonido</li>
+                            <li>Baños María</li>
+                            <li>Conductivímetro</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6">
+                        <ul class="service-list">
+                            <li>Microscopios</li>
+                            <li>Multiparámetros</li>
+                            <li>pHmetro</li>
+                            <li>Refractómetros</li>
+                            <li>Termo agitadores</li>
+                            <li>Termómetros digitales</li>
+                            <li>Turbidímetro</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <a class="btn btn-primary btn-brand" href="./cotizar.html">Solicitar servicio / cotización</a>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- FOOTER -->
     <footer>
+        <div class="container footer-content">
+            <div class="row g-4">
 
+                <div class="col-md-4">
+                    <h3 class="h5">QUIMEDSA</h3>
+                    <p>Soluciones químicas, equipos y soporte para laboratorio e industria.</p>
 
+                    <h4 class="mt-3">Redes Sociales</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com"><i class="bi bi-facebook"></i></a>
+                        <a href="https://twitter.com"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://instagram.com"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
 
+                <div class="col-md-4">
+                    <h3 class="h5">Enlaces</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="./nosotros.html">Nosotros</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="./contacto.html">Contáctanos</a></li>
+                    </ul>
+                </div>
 
-        
+                <div class="col-md-4">
+                    <h3 class="h5">Contacto</h3>
+                    <p>Lima, Perú</p>
+                    <p>ventas@quimedsa.com</p>
+                    <p>+51 923 767 955</p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom text-center mt-4">
+                <small>© 2025 QUIMEDSA. Todos los derechos reservados.</small>
+            </div>
+        </div>
     </footer>
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 
-
-
-    
 </body>
+
 </html>

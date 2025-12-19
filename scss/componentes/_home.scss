@@ -1,42 +1,138 @@
-@use "../utilidades/mixins";
-@use "../utilidades/extend";
 @use "../base/variables";
 
 .hero {
-    @include mixins.container();
-    @include mixins.modo-flex(row, space-between, center);
-    padding: 60px 0;
+    min-height: 70vh;
 
-    &__content {
-        width: 50%;
+    display: grid;
+    place-items: center;
 
-        h2 {
-            font-size: 28px;
-            font-weight: 700;
-            color: variables.$color-dark;
-            margin-bottom: 12px;
-        }
- 
-        p {
-            font-size: 16px;
-            margin-bottom: 18px;
-        }
+    color: variables.$white;
 
-        .btn {
-            @extend %boton-base;
-        }
-
-        .btn--primary {
-            background: variables.$color-primary;
-            color: white;
-
-            &:hover {
-                background-color: darken(variables.$color-primary, 8%);
-            }
-        }
-    }
-
-    &__image img {
-        width: 280px;
-    }
+    background:
+        linear-gradient(0deg, rgba(92, 104, 92, 0.918), rgba(48, 101, 187, 0.55)),
+        url("https://img.freepik.com/fotos-premium/cientificos-trabajan-laboratorios-ciencias_34433-640.jpg") center / cover no-repeat;
 }
+
+.hero-content {
+    padding: 5rem 0;
+}
+
+.hero-content h1 {
+    font-weight: 800;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.hero-content p {
+    max-width: 60ch;
+    margin: 1rem 0 1.5rem;
+    opacity: 0.95;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.section-muted {
+    background-color: variables.$light;
+}
+
+.service-card {
+    border: none;
+    border-radius: variables.$radius;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.nav-card {
+    display: block;
+
+    background-color: variables.$white;
+    color: inherit;
+
+    padding: 1.25rem;
+    border-radius: variables.$radius;
+
+    text-decoration: none;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.nav-card:focus-visible {
+    outline: 3px solid rgba(13, 110, 253, 0.35);
+    outline-offset: 4px;
+}
+
+.allies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem;
+}
+
+.ally-item {
+    width: 300px;
+    height: 160px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ally-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.ally-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+// ESTE EL HERO DE PAGINA - NOSOSTROS
+.about-hero {
+    min-height: 55vh;
+
+    display: grid;
+    place-items: center;
+
+    color: variables.$white;
+
+    background:
+        linear-gradient(0deg, rgba(11, 19, 32, 0.65), rgba(11, 19, 32, 0.65)),
+        url("https://www.iltascabile.com/wp-content/uploads/2016/11/donnescienza-hero.jpg") center / cover no-repeat;
+}
+
+.about-hero-content {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.about-hero-content h1 {
+    font-weight: 800;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.about-hero-content p {
+    max-width: 60ch;
+    margin: 1rem auto 0;
+    opacity: 0.95;
+}
+

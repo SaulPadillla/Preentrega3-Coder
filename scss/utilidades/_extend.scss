@@ -1,21 +1,8 @@
 //SIRVE PARA EVITAR HACER ESTRUCTURAS DE MAS CUMPLE LO MISMOS QUE EL MIXIN PERO SE USA EN CASOS CUANDO SOLO VAS A CAMBIAR 1 SOLA COSA
 //BLOQUE FIJO
-@use "../base/variables" as variables;
+
 
 // BOTONSS
-%boton-base {
-    padding: 10px 18px;
-    border-radius: 6px;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-block;
-    transition: .3s ease;
-}
+
 
 // CARDS
-%card-base {
-    background: variables.$color-light;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 6px rgba(0,0,0,.1);
-}

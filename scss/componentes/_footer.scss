@@ -1,41 +1,53 @@
-//TODO LO DEL FOOTER
 @use "../base/variables";
-@use "../utilidades/mixins";
 
-.footer {
-    background: variables.$color-dark;
-    color: variables.$color-light;
-    padding: 30px 0;
+// TODO LO DEL FOOTER
+footer {
+    margin-top: 3rem;
+    background-color: variables.$dark;
+    color: variables.$white;
+}
 
-    &__container {
-        @include mixins.container();
-        @include mixins.modo-flex(row, space-between, flex-start);
+.footer-content {
+    padding: 2rem 0;
+}
 
-        @include mixins.breakpoint(800px) {
-            @include mixins.modo-flex(column, center, center);
-            text-align: center;
-            gap: 20px;
-        }
-    }
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-    &__logo img {
-        width: 60px;
-        margin-bottom: 5px;
-    }
+.footer-links li {
+    margin: 0.5rem 0;
+}
 
-    &__icons img {
-        width: 26px;
-        transition: .2s;
+.footer-links a {
+    color: variables.$white;
+    text-decoration: none;
+}
 
-        &:hover {
-            transform: scale(1.15);
-        }
-    }
+.footer-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
 
-    &__copy {
-        text-align: center;
-        margin-top: 20px;
-        opacity: .7;
-        font-size: 14px;
-    }
+
+.social-links a {
+    font-size: 1.4rem;
+    margin-right: 0.75rem;
+    color: variables.$white;
+    transition: opacity 0.2s ease;
+}
+
+.social-links a:hover {
+    opacity: 0.85;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    
 }
